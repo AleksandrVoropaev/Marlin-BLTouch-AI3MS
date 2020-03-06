@@ -1041,7 +1041,7 @@
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Set the boundaries for probing (where the probe can reach).
-  #define LEFT_PROBE_BED_POSITION 10
+  #define LEFT_PROBE_BED_POSITION 25
   #define RIGHT_PROBE_BED_POSITION 190
   #define FRONT_PROBE_BED_POSITION 10
   #define BACK_PROBE_BED_POSITION 202
