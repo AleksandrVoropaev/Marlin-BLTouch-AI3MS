@@ -19,6 +19,27 @@
 18. Reboot printer
 19. G26 - тестовая печать или печать тестовой модели
 
+Вариант 3DMN (YouTube):
+1. G28 - homing
+2. M851 Z0 - reset Z-offset to zero
+3. M500 - store settings to EEPROM
+4. M501 - set EEPROM as active parameters
+5. M503 - display current parameters
+6. G28 Z - home Z
+7. G1 F60 Z0 - slowly move Z to zero Z-offset
+8. M211 S0 - off soft endstop
+9. Move nozzle down till have friction on a pice of paper
+10. Add thickness of a paper (aprox. -0.01 mm) to the received number
+11. M851 Z[offset]
+12. M211 S1 enable endstops
+13. M500 - store settings to EEPROM
+14. M501 - set EEPROM as active parameters
+15. M503 - display current parameters
+16. Check if z-offset is correct
+17. G28 - homing
+18. G1 F60 Z0 - moves Z to the correct position
+
+
 Стартовый скрипт для печати:
 G91 ;relative coordinates
 G1 F200 E-10 ;retract 10mm
